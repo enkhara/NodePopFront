@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/newProduct.css">
+    <title>Nodepop</title>
+</head>
+<body>
+    <header>
+        <h1>Nodepop</h1>
+    </header>
+    <div class="loader-container">
+            <div class="lds-heart"><div></div></div>
+        </div>
+        <div class="global-errors hidden">
+
+        </div>
+        <main class="new-product">
+            <h1 class="title-newProduct">
+                Añade tu producto
+            </h1>
+            <form class="new-productForm">
+                <label for="foto" class="foto-label">Foto</label>
+                <input class="foto-input"  type="file" name="foto" id="foto" accept="image/*" >
+
+                <label for="name" class="name-label">Nombre del producto</label>
+                <input class="name-input"  name="name" type="text" id="name" required>
+
+                <label for="price" class="price-label">Precio</label>
+                <input class="price-input"  name="price" type="number" id="price" required>
+
+                <label for="productType" class="productType-label">Compra / Venta</label>
+                <input class="productType-input"  name="productType" type="text" id="productType" required>
+                <button class="add-product" disabled>Crear</button>
+            </form>
+            
+            
+            
+        </main>
+
+        
+        <script type='module' src="./js/newProduct.js"></script>
+    <footer>
+        <strong>© 2020 Nodepop. All Rights Reserved</strong>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@import url(./loader.css);
+@import url(./tagsHTML.css);
+@import url(./variables.css);
+@import url(./products.css);
+@import url(./login.css);
+@import url(./error.css);
+@import url(./buttons.css);
+
+/*contenedor*/
+/*
+.icon-login {
+	position: absolute;
+	display: block;
+	text-align: center;
+	margin: 10%;
+}*/
+
+/*lupa*/
+/*
+.search.icon {
+	color: #000;
+	position: absolute;
+	margin-top: 2px;
+	margin-left: 3px;
+	width: 12px;
+	height: 12px;
+	border: solid 1px currentColor;
+	border-radius: 100%;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.search.icon:before {
+	content: '';
+	position: absolute;
+	top: 12px;
+	left: 5px;
+	height: 6px;
+	width: 1px;
+	background-color: currentColor;
+}
+*/

@@ -1,0 +1,51 @@
+.global-errors {
+	width: 100%;
+	/*border: 1rem solid black;*/
+	z-index: 0.8;
+	position: fixed;
+	top: calc(var(--navbar-height) + 1.6rem);
+	bottom: calc(var(--footer-height) + 1rem);
+	background-color: var(--blue-alphacolor);
+	display: block;
+	/* min-height: 100vh; */
+	/* align-items: center; */
+
+	/* background-color: black; */
+}
+.global-errors.hidden,
+.error-window.hidden {
+	display: none;
+}
+
+.error-window {
+	overflow: hidden;
+	width: 60%;
+	height: 40%;
+	margin-top: 10%;
+	margin-left: 20%;
+	border-radius: 0.5rem;
+	background-color: rgb(247, 170, 170);
+	position: absolute;
+}
+
+.error-button {
+	font-family: textElements;
+	color: white;
+	position: absolute;
+	margin-top: 0.5rem;
+	right: 1rem;
+	border-radius: 1rem;
+	border: none;
+	background-color: rgb(75, 2, 2);
+}
+
+.error-title {
+	padding: 1% 2%;
+	font-size: 2rem;
+	background-color: rgb(255, 0, 0, 0.8);
+}
+
+.error-message {
+	font-family: textElements;
+	padding-left: 5%;
+}

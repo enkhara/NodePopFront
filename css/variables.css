@@ -1,0 +1,25 @@
+@font-face {
+	font-family: textElements;
+	src: url('../fonts/ComicNeue-Bold.ttf');
+}
+
+@font-face {
+	font-family: titlesElements;
+	src: url('../fonts/Bangers-Regular.ttf');
+}
+
+:root {
+	--pink-color: #ff66d2;
+	--blue-color: #61f0f4;
+	--vanilla-color: #f9ebbe;
+	--shadow-color: #175760;
+	--white-color: #ffffff;
+	--grey-color: #2c3230;
+	--yellow-color: #fed715;
+	--darkblue-color: #0037b3;
+	--blue-alphacolor: rgb(97, 240, 244, 0.8);
+
+	--max-width: 900px;
+	--footer-height: 2rem;
+	--navbar-height: 4.5rem;
+}
