@@ -46,3 +46,22 @@
 	margin-top: 4rem;
 	align-self: center;
 }
+
+.button {
+	background-color: var(--pink-color);
+	border: none;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-family: textElements;
+	border-radius: 5rem;
+	border: none;
+	padding: 0.5rem 2rem;
+	font-size: 1rem;
+}
+
+:disabled {
+	opacity: 0.6;
+	/*cursor: not-allowed;*/
+}

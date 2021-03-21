@@ -68,7 +68,6 @@ export default {
 
 	registerUser: async function (user) {
 		const url = `${BASE_URL}/auth/register`;
-		debugger;
 		return await this.post(url, user);
 	},
 
