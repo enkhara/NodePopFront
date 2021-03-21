@@ -33,21 +33,19 @@ export default class DetailController extends BaseController {
 		try {
 			const productId = this.getProductId();
 			const product = await DataService.getProducts(productId);
+
 			if (product) {
 				const { userId, userName } = await DataService.getUser();
 				const buttonDelete = document.querySelector('button');
 				if (product.userId === userId) {
 					buttonDelete.classList.remove('hidden');
-					console.log(`product userId${product.userId} --- userId ${userId}`);
 				} else {
 					buttonDelete.classList.add('hidden');
 				}
 				this.renderOneProduct(product);
-				console.log('este es el product id', product.id);
 			} else {
 				this.renderNoneProduct();
 			}
-			console.log('product', product, 'product id', productId);
 		} catch (error) {
 			this.publish(this.events.ERROR, error);
 		} finally {

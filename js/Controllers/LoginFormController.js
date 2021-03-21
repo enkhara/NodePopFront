@@ -16,7 +16,6 @@ export default class LoginFormController extends RegisterFormController {
 				username: this.element.elements.email.value,
 				password: this.element.elements.password.value,
 			};
-
 			this.publish(this.events.START_LOADING);
 			try {
 				const data = await DataService.login(user);

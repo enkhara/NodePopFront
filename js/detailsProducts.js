@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 	const deleteButtonElement = document.querySelector('.button-deleteProduct');
 	const deleteButton = new ButtonsController(deleteButtonElement);
 	deleteButton.deleteProductButton();
-
 	const detailProductElement = document.querySelector('.products-list');
 	const detailController = new DetailController(detailProductElement);
 	detailController.showDetailsProduct();

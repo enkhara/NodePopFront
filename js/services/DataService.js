@@ -6,10 +6,9 @@ const TOKEN_KEY = 'token';
 export default {
 	//noneProducts oneProduct twoProducts products
 	getProducts: async (id = null) => {
-		const url = `${BASE_URL}/api/products`;
+		let url = `${BASE_URL}/api/products`;
 		if (id) {
 			url += `/${id}`;
-			console.log('url de detalle', url);
 		}
 
 		try {
@@ -74,7 +73,6 @@ export default {
 
 	login: async function (user) {
 		const url = `${BASE_URL}/auth/login`;
-		console.log(user);
 		return await this.post(url, user);
 	},
 
@@ -105,7 +103,6 @@ export default {
 		form.append('file', image);
 		const url = `${BASE_URL}/upload`;
 		const response = await this.post(url, form, false);
-		console.log('uploadImage', response);
 		return response.path || null;
 	},
 

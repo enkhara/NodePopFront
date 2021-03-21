@@ -8,7 +8,6 @@ export default class ButtonsController extends BaseController {
 
 			if (event.target == this.element) {
 				menu.classList.toggle('hidden');
-				console.log(this.element);
 			}
 		});
 	}
@@ -21,7 +20,6 @@ export default class ButtonsController extends BaseController {
 
 	deleteProductButton() {
 		this.element.addEventListener('click', (event) => {
-			console.log('event', event, 'element', this.element);
 			const idProduct = this.getProductId();
 			event.stopPropagation();
 			const deleteConfirm = confirm(
@@ -35,12 +33,13 @@ export default class ButtonsController extends BaseController {
 	}
 
 	productButtonDetail(product) {
-		console.log('entro en productos', this.element);
-		console.log(product);
 		this.element.addEventListener('click', (event) => {
+			console.log('click en producto', product.id);
+			//solucionar carga de detalle, llamar a dataservice para la peticion
 			window.location.href = `/details.html?id=${product.id}`;
-			this.publish(this.events.DETAIL_PRODUCT, product);
-			console.log('detalle de producto', event, product);
+			//este publish que fa aquí? verificar que aixo esta fent alguna cosa, a on enllaça
+			//o si era una prova que es va quedar per aquí
+			//this.publish(this.events.DETAIL_PRODUCT, product);
 		});
 	}
 }
