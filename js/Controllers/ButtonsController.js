@@ -19,9 +19,9 @@ export default class ButtonsController extends BaseController {
 		return idProduct;
 	}
 
-	deleteButton() {
-		addEventListener('click', (event) => {
-			console.log('evente0', event, 'element', this.element);
+	deleteProductButton() {
+		this.element.addEventListener('click', (event) => {
+			console.log('event', event, 'element', this.element);
 			const idProduct = this.getProductId();
 			event.stopPropagation();
 			const deleteConfirm = confirm(

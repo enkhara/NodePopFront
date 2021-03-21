@@ -25,6 +25,5 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 	loginButton.loginButton();
 
 	const newProduct = document.querySelector('header');
-
 	new NewProductController(newProduct);
 });

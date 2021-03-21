@@ -9,6 +9,7 @@ export default {
 		const url = `${BASE_URL}/api/products`;
 		if (id) {
 			url += `/${id}`;
+			console.log('url de detalle', url);
 		}
 
 		try {
