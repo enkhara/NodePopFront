@@ -1,10 +1,10 @@
-.new-productForm {
+/* .new-productForm {
 	margin: auto;
 	border: 0.2rem solid var(--shadow-color);
 	border-radius: 10px;
 	width: 60%;
 	height: calc(60vh - var(--navbar-height) - var(--footer-height));
-	/* height: 400px; */
+	height: 400px; 
 	background: var(--white-color);
 	padding: 2rem;
 }
@@ -30,4 +30,4 @@ input {
 
 button {
 	margin: auto;
-}
+} */

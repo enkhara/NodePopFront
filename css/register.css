@@ -1,7 +1,9 @@
 @import url(./loader.css);
 @import url(./tagsHTML.css);
 @import url(./variables.css);
-@import url(./formRegister.css);
-@import url(./login.css);
 @import url(./error.css);
-@import url(./buttons.css);
+@import url(./form.css);
+
+/*@import url(./formRegister.css);*/
+/*@import url(./login.css);
+@import url(./buttons.css);*/
