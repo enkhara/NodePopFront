@@ -1,7 +1,7 @@
 .global-errors {
 	width: 100%;
 	/*border: 1rem solid black;*/
-	z-index: 0.8;
+	z-index: 1;
 	position: fixed;
 	top: calc(var(--navbar-height) + 1.6rem);
 	bottom: calc(var(--footer-height) + 1rem);

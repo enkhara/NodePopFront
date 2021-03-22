@@ -15,6 +15,16 @@ export default {
 			const response = await fetch(url);
 			if (response.ok) {
 				const data = await response.json();
+				console.log(data);
+				data.forEach((product) => {
+					product.name = product.name.replace(/(<([^>]+)>)/gi, '');
+					product.price = product.price.replace(/(<([^>]+)>)/gi, '');
+					product.transactionType = product.transactionType.replace(
+						/(<([^>]+)>)/gi,
+						''
+					);
+				});
+				console.log(data);
 				return data;
 			} else {
 				if (id) {
