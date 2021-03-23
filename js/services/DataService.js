@@ -6,7 +6,7 @@ const TOKEN_KEY = 'token';
 export default {
 	//noneProducts oneProduct twoProducts products
 	getProducts: async (id = null) => {
-		let url = `${BASE_URL}/api/products`;
+		let url = `${BASE_URL}/api/noneProduct`;
 		if (id) {
 			url += `/${id}`;
 		}
@@ -16,14 +16,14 @@ export default {
 			if (response.ok) {
 				const data = await response.json();
 				console.log(data);
-				// data.forEach((product) => {
-				// 	product.name = product.name.replace(/(<([^>]+)>)/gi, '');
-				// 	product.price = product.price.replace(/(<([^>]+)>)/gi, '');
-				// 	product.transactionType = product.transactionType.replace(
-				// 		/(<([^>]+)>)/gi,
-				// 		''
-				// 	);
-				// });
+				data.forEach((product) => {
+					product.name = product.name.replace(/(<([^>]+)>)/gi, '');
+					product.price = product.price.replace(/(<([^>]+)>)/gi, '');
+					product.transactionType = product.transactionType.replace(
+						/(<([^>]+)>)/gi,
+						''
+					);
+				});
 				// debugger;
 				// for (let i = 0; i < data.length; i++) {
 				// 	data[i].name = data[i].name.replace(/(<([^>]+)>)/gi, '');
@@ -105,6 +105,7 @@ export default {
 
 	isUserLogged: async function () {
 		const token = await this.getToken();
+		console.log(token);
 		return token !== null;
 	},
 

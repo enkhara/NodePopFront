@@ -9,12 +9,16 @@ export default class NewProductController extends BaseController {
 
 	async checkIfUserIsLogged() {
 		const userIsLogged = await DataService.isUserLogged();
+
 		if (userIsLogged) {
-			const newProductButton = this.element.querySelector('.button-newProduct');
+			const newProductButton = this.element.querySelector(
+				'#addNewProduct-button'
+			);
+			// const newProductButton = this.element.querySelector('.button-newProduct');
 			newProductButton.classList.remove('hidden');
 		} else {
-			const userButton = this.element.querySelector('.profile-icon');
-			userButton.classList.remove('hidden');
+			// const userButton = this.element.querySelector('.profile-icon');
+			// userButton.classList.remove('hidden');
 		}
 	}
 }

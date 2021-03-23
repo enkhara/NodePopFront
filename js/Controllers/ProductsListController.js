@@ -1,11 +1,10 @@
 import ButtonsController from './ButtonsController.js';
 import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
-import { productView, noneProductsView, oneProductView } from '../views.js';
+import { productView, noneProductsView } from '../views.js';
+import DataService from '../services/DataService.js';
 
 export default class ProductsListController extends BaseController {
-	//COGER EL MODELO Y PASARLO A LA VISTA, PARA MOSTRARLO
-
 	renderProducts(products, cssClass) {
 		for (const product of products) {
 			const div = document.createElement('div');
@@ -30,33 +29,33 @@ export default class ProductsListController extends BaseController {
 		div.innerHTML = noneProductsView();
 		this.element.appendChild(div);
 
-		const buttonElement = document.querySelector('.button-add');
-		const button = new ButtonsController(buttonElement);
-		button.addProductButton();
-	}
+		const isLogged = DataService.getToken();
+		//       TODO: cambiar los ids de los botones por el class
+		const isLoggedd = false;
+		if (isLoggedd) {
+			console.log('el usuario esta logeado en no productos', isLogged);
+			const linkButtonAddProduct = document.querySelector('#button-AddProduct');
+			linkButtonAddProduct.classList.remove('hidden');
 
-	renderOneProduct(product) {
-		const div = document.createElement('div');
-		div.classList.add('one-product');
-		div.innerHTML = oneProductView(product);
-		this.element.appendChild(div);
+			//  TODO::mostrar botton para añadir anuncio
+		} else {
+			const linkButtonLogin = document.querySelector('#login-button');
+			linkButtonLogin.classList.remove('hidden');
+			// TODO: mostrar boton a registrarse o logearse
+		}
+		// const buttonElement = document.querySelector('.button-add');
+		// const button = new ButtonsController(buttonElement);
+		// button.addProductButton();
 	}
-
-	//METODO
 	async loadProducts() {
 		this.publish(this.events.START_LOADING, {});
 
 		try {
 			const products = await dataService.getProducts();
-			switch (products.length) {
-				case 0:
-					this.renderNoneProducts();
-					break;
-				case 1:
-					this.renderOneProduct(products[0]);
-					break;
-				default:
-					this.renderProducts(products, 'product');
+			if (products.length === 0) {
+				this.renderNoneProducts();
+			} else {
+				this.renderProducts(products, 'product');
 			}
 		} catch (error) {
 			this.publish(this.events.ERROR, error);
