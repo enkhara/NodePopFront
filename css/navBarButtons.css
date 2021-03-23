@@ -1,0 +1,38 @@
+.nav-bar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: fit-content;
+	background-color: var(--pink-color);
+}
+
+.nav-barItem {
+	float: right;
+}
+
+.nav-barItem .button-userNav {
+	display: block;
+	color: var(--white-color);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	margin-top: 0.5rem;
+}
+
+.nav-barItem .button-userNav:hover {
+	background-color: var(--white-color);
+	color: var(--pink-color);
+}
+
+@media only screen and (max-width: 500px) {
+	.nav-bar {
+		position: fixed;
+		top: var(--navbar-height);
+		width: 100%;
+		margin: 0;
+	}
+}

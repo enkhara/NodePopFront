@@ -45,7 +45,7 @@ export default class ProductsListController extends BaseController {
 	//METODO
 	async loadProducts() {
 		this.publish(this.events.START_LOADING, {});
-		debugger;
+
 		try {
 			const products = await dataService.getProducts();
 			switch (products.length) {
