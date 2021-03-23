@@ -5,6 +5,7 @@ export default class RegisterFormController extends BaseController {
 	constructor(element) {
 		super(element);
 		this.attachEventListener();
+		this.focusInInput();
 	}
 
 	async postRequest(user) {
@@ -41,5 +42,10 @@ export default class RegisterFormController extends BaseController {
 				}
 			});
 		});
+	}
+
+	focusInInput() {
+		const input = this.element.querySelector('.user-input');
+		input.focus();
 	}
 }

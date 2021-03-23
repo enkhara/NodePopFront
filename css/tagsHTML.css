@@ -68,6 +68,13 @@ li {
 	text-decoration: none;
 	font-family: textElements;
 }
+a:-webkit-any-link {
+	color: black;
+}
+a:link {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
+}
 
 ul {
 	list-style-type: none;

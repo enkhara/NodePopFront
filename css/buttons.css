@@ -1,15 +1,17 @@
 .button-newProduct,
-.button-deleteProduct {
+.button-deleteProduct,
+.button-home {
 	border-radius: 10px;
 	position: absolute;
-	right: 4%;
+	right: 6%;
 	padding: 0.3rem;
 	top: calc(var(--navbar-height) - 0.5rem);
 	background-color: var(--white-color);
 	color: var(--pink-color);
 }
 
-.userNav {
+.button-deleteProduct .userNav,
+.nav-buttons {
 	display: flex;
 	flex-direction: column;
 	position: fixed;

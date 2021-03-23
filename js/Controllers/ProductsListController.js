@@ -18,9 +18,9 @@ export default class ProductsListController extends BaseController {
 			} else {
 				div.classList.add('buy');
 			}
-			const productButton = new ButtonsController(div);
+			// const productButton = new ButtonsController(div);
 
-			productButton.productButtonDetail(product);
+			// productButton.productButtonDetail(product);
 		}
 	}
 
@@ -45,6 +45,7 @@ export default class ProductsListController extends BaseController {
 	//METODO
 	async loadProducts() {
 		this.publish(this.events.START_LOADING, {});
+		debugger;
 		try {
 			const products = await dataService.getProducts();
 			switch (products.length) {

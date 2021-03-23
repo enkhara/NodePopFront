@@ -20,9 +20,9 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 	const errorElement = document.querySelector('.global-errors');
 	const ErrorController = new ErrorsController(errorElement);
 
-	const loginButtonElement = document.querySelector('.profile-icon');
-	const loginButton = new ButtonsController(loginButtonElement);
-	loginButton.loginButton();
+	// const loginButtonElement = document.querySelector('.profile-icon');
+	// const loginButton = new ButtonsController(loginButtonElement);
+	// loginButton.loginButton();
 
 	const newProduct = document.querySelector('header');
 	new NewProductController(newProduct);

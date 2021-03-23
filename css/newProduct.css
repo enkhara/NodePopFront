@@ -1,9 +1,10 @@
-@import url(./loader.css);
 @import url(./tagsHTML.css);
+@import url(./loader.css);
 @import url(./variables.css);
 @import url(./products.css);
 @import url(./form.css);
 @import url(./error.css);
+@import url(./buttons.css);
 
 /*
 @import url(./formNewProduct.css);

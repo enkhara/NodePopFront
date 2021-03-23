@@ -16,14 +16,23 @@ export default {
 			if (response.ok) {
 				const data = await response.json();
 				console.log(data);
-				data.forEach((product) => {
-					product.name = product.name.replace(/(<([^>]+)>)/gi, '');
-					product.price = product.price.replace(/(<([^>]+)>)/gi, '');
-					product.transactionType = product.transactionType.replace(
-						/(<([^>]+)>)/gi,
-						''
-					);
-				});
+				// data.forEach((product) => {
+				// 	product.name = product.name.replace(/(<([^>]+)>)/gi, '');
+				// 	product.price = product.price.replace(/(<([^>]+)>)/gi, '');
+				// 	product.transactionType = product.transactionType.replace(
+				// 		/(<([^>]+)>)/gi,
+				// 		''
+				// 	);
+				// });
+				// debugger;
+				// for (let i = 0; i < data.length; i++) {
+				// 	data[i].name = data[i].name.replace(/(<([^>]+)>)/gi, '');
+				// 	data[i].price = data[i].price.replace(/(<([^>]+)>)/gi, '');
+				// 	data[i].transactionType = data[i].transactionType.replace(
+				// 		/(<([^>]+)>)/gi,
+				// 		''
+				// 	);
+				// }
 				console.log(data);
 				return data;
 			} else {

@@ -32,14 +32,14 @@ export default class ButtonsController extends BaseController {
 		});
 	}
 
-	productButtonDetail(product) {
-		this.element.addEventListener('click', (event) => {
-			console.log('click en producto', product.id);
-			//solucionar carga de detalle, llamar a dataservice para la peticion
-			window.location.href = `/details.html?id=${product.id}`;
-			//este publish que fa aquí? verificar que aixo esta fent alguna cosa, a on enllaça
-			//o si era una prova que es va quedar per aquí
-			//this.publish(this.events.DETAIL_PRODUCT, product);
-		});
-	}
+	// productButtonDetail(product) {
+	// 	this.element.addEventListener('click', (event) => {
+	// 		console.log('click en producto', product.id);
+	// 		//solucionar carga de detalle, llamar a dataservice para la peticion
+	// 		window.location.href = `/details.html?id=${product.id}`;
+	// 		//este publish que fa aquí? verificar que aixo esta fent alguna cosa, a on enllaça
+	// 		//o si era una prova que es va quedar per aquí
+	// 		//this.publish(this.events.DETAIL_PRODUCT, product);
+	// 	});
+	// }
 }
