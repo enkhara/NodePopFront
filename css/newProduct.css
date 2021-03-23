@@ -2,6 +2,10 @@
 @import url(./tagsHTML.css);
 @import url(./variables.css);
 @import url(./products.css);
-@import url(./formNewProduct.css);
+@import url(./form.css);
 @import url(./error.css);
+
+/*
+@import url(./formNewProduct.css);
 @import url(./FormRegister.css);
+*/

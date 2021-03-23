@@ -1,6 +1,7 @@
 .register-form,
-.new-product {
+.new-productForm {
 	display: grid;
+	min-width: 500px;
 	/*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 80px 40px 40px 40px 40px 80px;*/
 	max-width: 60%;
@@ -20,23 +21,31 @@
 label,
 input[name='email'],
 input[name='password'],
-input[type='submit'] {
+input[type='submit'],
+input[name='name'],
+input[name='price'],
+input[name='foto'],
+select[name='productType'] {
 	font-family: textElements;
 	border: 0;
 	outline: none;
 }
 
 label {
-	display: block;
 	margin: auto;
 	width: 90%;
 	font-size: 1.2rem;
-	padding: 1rem 0 0.2rem 0;
-	color: var(--grey-color);
+	padding: 0.5rem 1rem;
+	display: block;
 }
 
-input[name='email'],
-input[name='password'] {
+/* input[name='email'],
+input[name='password'],
+input[type='submit'],
+input[name='name'],
+input[name='foto'] */
+input,
+select {
 	margin: auto;
 	display: block;
 	width: 90%;
@@ -46,8 +55,19 @@ input[name='password'] {
 	color: white;
 	border-bottom: solid 0.1rem var(--blue-color);
 }
+/* 
+input[name='price'],
+select[name='productType'] {
+	width: 40%;
+	padding: 0.5rem 0.5rem;
+	background: var(--pink-color);
+	opacity: 0.8;
+	color: white;
+	border-bottom: solid 0.1rem var(--blue-color);
+} */
 
-.button {
+.button,
+.add-product {
 	display: block;
 	margin: auto;
 	border: none;

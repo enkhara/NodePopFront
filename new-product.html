@@ -32,13 +32,19 @@
             <label for="name" class="name-label">Nombre del producto</label>
             <input class="name-input" name="name" type="text" id="name" required>
 
-            <label for="price" class="price-label">Precio</label>
+            <label for="price" class="price-label" name='price'>Precio</label>
             <input class="price-input" name="price" type="number" id="price" required>
 
-            <label for="productType" class="productType-label">Compra / Venta</label>
-            <input class="productType-input" name="productType" type="text" id="productType" required>
+            <label for="productType" class="productType-label" name='productType'>Modalidad</label>
+            <select name="productType" required>
+                <option value="sale">Venta</option>
+                <option value="buy">Compra</option>
+            </select>
+
+
             <button class="add-product">Crear</button>
         </form>
+
 
 
 
