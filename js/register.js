@@ -7,6 +7,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	const loader = document.querySelector('.loader-container');
 	const loaderController = new LoaderController(loader);
 
+	const navBar = document.querySelector('.nav-bar');
+	new NavBarController(navBar);
+
 	const errorElement = document.querySelector('.global-errors');
 	const ErrorController = new ErrorsController(errorElement);
 

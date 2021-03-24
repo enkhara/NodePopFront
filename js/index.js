@@ -3,6 +3,7 @@ import LoaderController from './Controllers/LoaderController.js';
 import ErrorsController from './Controllers/ErrorsController.js';
 import ButtonsController from './Controllers/ButtonsController.js';
 import NewProductController from './Controllers/NewProductController.js';
+import NavBarController from './Controllers/NavBarController.js';
 //cuando todo el html y css esten cargados
 window.addEventListener('DOMContentLoaded', async (event) => {
 	//seleccionamos el loader
@@ -12,6 +13,8 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 	//creamos la clase hidden para lds-heart
 
 	//seleccionamos el elemento para el controlador
+	const navBar = document.querySelector('.nav-bar');
+	new NavBarController(navBar);
 
 	const element = document.querySelector('.products-list');
 	const controller = new ProductsListController(element);
