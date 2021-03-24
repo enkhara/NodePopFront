@@ -14,7 +14,10 @@
 	float: right;
 }
 
-.nav-barItem .button-userNav {
+.nav-barItem .register-button,
+.nav-barItem .login-button,
+.nav-barItem .logout-button,
+.nav-barItem .addNewProduct-button {
 	display: block;
 	color: var(--white-color);
 	text-align: center;
@@ -23,13 +26,9 @@
 	margin-top: 1rem;
 }
 
-.nav-barItem .button-userNav:hover {
+.nav-barItem #button-userNav:hover {
 	background-color: var(--white-color);
 	color: var(--pink-color);
-}
-
-.button-userNav.hidden {
-	display: none;
 }
 
 @media only screen and (max-width: 500px) {
@@ -39,4 +38,11 @@
 		width: 100%;
 		margin: 0;
 	}
+}
+
+.register-button.hidden,
+.login-button.hidden,
+.logout-button.hidden,
+.addNewProduct-button.hidden {
+	display: none;
 }

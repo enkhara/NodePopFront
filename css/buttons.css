@@ -1,3 +1,23 @@
+.button-addNewProduct {
+	background-color: var(--pink-color);
+	font-size: 3rem;
+	font-family: textElements;
+	margin: auto;
+	padding-right: 1rem;
+	padding-left: 1rem;
+	margin-bottom: 2rem;
+	border-radius: 1rem;
+	text-anchor: middle;
+	border: none;
+	color: var(--white-color);
+	border: 0.2rem solid var(--pink-color);
+}
+.button-addNewProduct:hover {
+	background-color: var(--white-color);
+	color: var(--pink-color);
+	border: 0.2rem solid var(--pink-color);
+}
+
 .button-newProduct,
 .button-deleteProduct,
 .button-home {

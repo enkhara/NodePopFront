@@ -32,6 +32,17 @@ export default class ButtonsController extends BaseController {
 		});
 	}
 
+	addProductButton() {
+		this.element.addEventListener('click', (event) => {
+			const isLogged = DataService.isUserLogged();
+			if (isLogged) {
+				window.location.href = '/new-product.html';
+			} else {
+				window.location.href = '/login.html';
+			}
+		});
+	}
+
 	// productButtonDetail(product) {
 	// 	this.element.addEventListener('click', (event) => {
 	// 		console.log('click en producto', product.id);

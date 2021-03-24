@@ -28,8 +28,8 @@ export const errorView = (errorMessage) => {
 export const noneProductsView = () => {
 	return `
             <h1 class="all-sale">¡¡Todo vendido!!</h1>
-            <a href="/new-product.html" class="button-userNav hidden" id="button-AddProduct">Añade tus productos</a>
-            <a href="/login.html" class="button-userNav hidden" id="login-button" >Iniciar sesión</a>
+            <h2 class="message-login">Sé el primero en añadir un producto</h2>
+            <button class= "button-addNewProduct">+</button>
             `;
 };
 export const oneProductView = (product) => {

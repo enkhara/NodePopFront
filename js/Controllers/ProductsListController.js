@@ -29,24 +29,11 @@ export default class ProductsListController extends BaseController {
 		div.innerHTML = noneProductsView();
 		this.element.appendChild(div);
 
-		const isLogged = DataService.getToken();
-		//       TODO: cambiar los ids de los botones por el class
-		const isLoggedd = false;
-		if (isLoggedd) {
-			console.log('el usuario esta logeado en no productos', isLogged);
-			const linkButtonAddProduct = document.querySelector('#button-AddProduct');
-			linkButtonAddProduct.classList.remove('hidden');
-
-			//  TODO::mostrar botton para añadir anuncio
-		} else {
-			const linkButtonLogin = document.querySelector('#login-button');
-			linkButtonLogin.classList.remove('hidden');
-			// TODO: mostrar boton a registrarse o logearse
-		}
-		// const buttonElement = document.querySelector('.button-add');
-		// const button = new ButtonsController(buttonElement);
-		// button.addProductButton();
+		const buttonElement = document.querySelector('.button-addNewProduct');
+		const button = new ButtonsController(buttonElement);
+		button.addProductButton();
 	}
+
 	async loadProducts() {
 		this.publish(this.events.START_LOADING, {});
 

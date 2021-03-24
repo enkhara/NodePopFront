@@ -1,0 +1,21 @@
+.link-container .login-link,
+.link-container .register-link {
+	display: block;
+	color: var(--white-color);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	margin-top: 1rem;
+	float: right;
+	margin: auto;
+	overflow: hidden;
+}
+
+.link-container {
+	list-style-type: none;
+	margin: auto;
+	padding: 0;
+	overflow: hidden;
+
+	background-color: var(--pink-color);
+}

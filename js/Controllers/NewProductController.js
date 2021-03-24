@@ -12,10 +12,10 @@ export default class NewProductController extends BaseController {
 
 		if (userIsLogged) {
 			const newProductButton = this.element.querySelector(
-				'#addNewProduct-button'
+				'.addNewProduct-button'
 			);
-			// const newProductButton = this.element.querySelector('.button-newProduct');
 			newProductButton.classList.remove('hidden');
+			// const newProductButton = this.element.querySelector('.button-newProduct');
 		} else {
 			// const userButton = this.element.querySelector('.profile-icon');
 			// userButton.classList.remove('hidden');

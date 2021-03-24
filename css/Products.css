@@ -44,19 +44,28 @@ None-Product
 	grid-column-start: 1;
 	grid-column-end: 4;
 	margin-top: auto1;
-	height: 300px;
+
 	border-radius: 1rem;
 	text-align: center;
+	display: grid;
+	min-width: 500px;
+	/*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 80px 40px 40px 40px 40px 80px;*/
+	max-width: 60%;
+	height: 90%;
+	background-color: white;
+	margin: auto;
+	border-radius: 1rem;
+	border: 0.5rem solid var(--shadow-color);
 }
-.button-add {
-	border-radius: 50%;
+.addNewProdcut-button {
+	/*border-radius: 50%;*/
+
 	color: white;
 	font-size: 3rem;
 	background-color: var(--pink-color);
 	border: none;
-	overflow: hidden;
-	height: 50px;
-	width: 50px;
+
 	padding: -2rem 3rem 0 0;
 }
 
@@ -70,6 +79,7 @@ None-Product
 	font-family: titlesElements;
 	padding-top: 4rem;
 }
+
 /**
 None-Products End
 */
