@@ -2,6 +2,7 @@ import LoaderController from './Controllers/LoaderController.js';
 import ErrorsController from './Controllers/ErrorsController.js';
 import RegisterFormController from './Controllers/RegisterFormController.js';
 import ButtonsController from './Controllers/ButtonsController.js';
+import NavBarController from './Controllers/NavBarController.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const loader = document.querySelector('.loader-container');
@@ -16,7 +17,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const formElement = document.querySelector('form');
 	const formController = new RegisterFormController(formElement);
 
-	const loginButtonElement = document.querySelector('.profile-icon');
-	const loginButton = new ButtonsController(loginButtonElement);
-	loginButton.loginButton();
+	// const loginButtonElement = document.querySelector('.profile-icon');
+	// const loginButton = new ButtonsController(loginButtonElement);
+	// loginButton.loginButton();
 });

@@ -99,6 +99,10 @@ export default {
 		localStorage.setItem(TOKEN_KEY, token);
 	},
 
+	deleteToken: async function () {
+		localStorage.removeItem(TOKEN_KEY);
+	},
+
 	getToken: async function () {
 		return localStorage.getItem(TOKEN_KEY);
 	},

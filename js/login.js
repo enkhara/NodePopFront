@@ -2,6 +2,7 @@ import LoaderController from './Controllers/LoaderController.js';
 import ErrorsController from './Controllers/ErrorsController.js';
 import LoginFormController from './Controllers/LoginFormController.js';
 import ButtonsController from './Controllers/ButtonsController.js';
+import NavBarController from './Controllers/NavBarController.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const loader = document.querySelector('.loader-container');

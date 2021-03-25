@@ -4,6 +4,7 @@ import ErrorsController from './Controllers/ErrorsController.js';
 import ButtonsController from './Controllers/ButtonsController.js';
 import NewProductController from './Controllers/NewProductController.js';
 import NavBarController from './Controllers/NavBarController.js';
+import LogoutController from './Controllers/LogoutController.js';
 //cuando todo el html y css esten cargados
 window.addEventListener('DOMContentLoaded', async (event) => {
 	//seleccionamos el loader
@@ -22,6 +23,10 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
 	const errorElement = document.querySelector('.global-errors');
 	const ErrorController = new ErrorsController(errorElement);
+
+	const logoutButtonElement = document.querySelector('.logout-button');
+	const logoutButton = new LogoutController(logoutButtonElement);
+	logoutButton.deleteTokeFromStorage();
 
 	// const loginButtonElement = document.querySelector('.profile-icon');
 	// const loginButton = new ButtonsController(loginButtonElement);
