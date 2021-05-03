@@ -13,7 +13,7 @@
 .nav-barItem {
 	float: right;
 }
-
+.nav-barItem .index-button,
 .nav-barItem .register-button,
 .nav-barItem .login-button,
 .nav-barItem .logout-button,
@@ -39,7 +39,7 @@
 		margin: 0;
 	}
 }
-
+.index-button.hidden,
 .register-button.hidden,
 .login-button.hidden,
 .logout-button.hidden,

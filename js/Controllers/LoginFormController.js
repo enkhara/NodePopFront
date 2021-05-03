@@ -9,7 +9,6 @@ export default class LoginFormController extends RegisterFormController {
 	}
 
 	attachEventListener() {
-		console.log('element', this.element);
 		this.element.addEventListener('submit', async (event) => {
 			event.preventDefault();
 
@@ -20,7 +19,7 @@ export default class LoginFormController extends RegisterFormController {
 			this.publish(this.events.START_LOADING);
 			try {
 				const data = await DataService.login(user);
-				console.log('toke?', data, data.accessToken);
+
 				DataService.saveToken(data.accessToken);
 
 				let next = '/';
@@ -38,17 +37,17 @@ export default class LoginFormController extends RegisterFormController {
 			}
 		});
 
-		this.element.querySelectorAll('input').forEach((input) => {
-			const button = this.element.querySelector('button');
-			input.addEventListener('keyup', (event) => {
-				console.log('apretando botton');
-				// if (this.element.checkValidity()) {
-				// 	button.removeAttribute('disable');
-				// } else {
-				// 	button.setAttribute('disabled', true);
-				// }
-			});
-		});
+		// this.element.querySelectorAll('input').forEach((input) => {
+		// 	const button = this.element.querySelector('button');
+		// 	input.addEventListener('keyup', (event) => {
+		// 		console.log('apretando botton');
+		// 		// if (this.element.checkValidity()) {
+		// 		// 	button.removeAttribute('disable');
+		// 		// } else {
+		// 		// 	button.setAttribute('disabled', true);
+		// 		// }
+		// 	});
+		// });
 	}
 
 	focusInInput() {

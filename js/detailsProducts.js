@@ -7,7 +7,7 @@ import LogoutController from './Controllers/LogoutController.js';
 
 window.addEventListener('DOMContentLoaded', async (event) => {
 	const loader = document.querySelector('.loader-container');
-	const loaderController = new LoaderController(loader);
+	new LoaderController(loader);
 
 	const navBar = document.querySelector('.nav-bar');
 	new NavBarController(navBar);
@@ -17,13 +17,14 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 	logoutButton.deleteTokeFromStorage();
 
 	const errorElement = document.querySelector('.global-errors');
-	const ErrorController = new ErrorsController(errorElement);
-
-	const deleteButtonElement = document.querySelector('.button-deleteProduct');
-	const deleteButton = new ButtonsController(deleteButtonElement);
-	deleteButton.deleteProductButton();
+	new ErrorsController(errorElement);
 
 	const detailProductElement = document.querySelector('.products-list');
 	const detailController = new DetailController(detailProductElement);
 	detailController.showDetailsProduct();
+
+	const deleteButtonElement = document.querySelector('.button-deleteProduct');
+	const deleteButton = new ButtonsController(deleteButtonElement);
+	deleteButton.deleteProductButton();
+	console.log(deleteButton);
 });

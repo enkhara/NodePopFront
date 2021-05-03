@@ -4,9 +4,8 @@ const BASE_URL = 'http://127.0.0.1:8000';
 const TOKEN_KEY = 'token';
 
 export default {
-	//noneProducts oneProduct twoProducts products
 	getProducts: async (id = null) => {
-		let url = `${BASE_URL}/api/noneProduct`;
+		let url = `${BASE_URL}/api/products`;
 		if (id) {
 			url += `/${id}`;
 		}
@@ -15,25 +14,23 @@ export default {
 			const response = await fetch(url);
 			if (response.ok) {
 				const data = await response.json();
-				console.log(data);
-				data.forEach((product) => {
-					product.name = product.name.replace(/(<([^>]+)>)/gi, '');
-					product.price = product.price.replace(/(<([^>]+)>)/gi, '');
-					product.transactionType = product.transactionType.replace(
+				if (id) {
+					data.name = data.name.replace(/(<([^>]+)>)/gi, '');
+					data.price = data.price.replace(/(<([^>]+)>)/gi, '');
+					data.transactionType = data.transactionType.replace(
 						/(<([^>]+)>)/gi,
 						''
 					);
-				});
-				// debugger;
-				// for (let i = 0; i < data.length; i++) {
-				// 	data[i].name = data[i].name.replace(/(<([^>]+)>)/gi, '');
-				// 	data[i].price = data[i].price.replace(/(<([^>]+)>)/gi, '');
-				// 	data[i].transactionType = data[i].transactionType.replace(
-				// 		/(<([^>]+)>)/gi,
-				// 		''
-				// 	);
-				// }
-				console.log(data);
+				} else {
+					data.forEach((product) => {
+						product.name = product.name.replace(/(<([^>]+)>)/gi, '');
+						product.price = product.price.replace(/(<([^>]+)>)/gi, '');
+						product.transactionType = product.transactionType.replace(
+							/(<([^>]+)>)/gi,
+							''
+						);
+					});
+				}
 				return data;
 			} else {
 				if (id) {
@@ -109,7 +106,6 @@ export default {
 
 	isUserLogged: async function () {
 		const token = await this.getToken();
-		console.log(token);
 		return token !== null;
 	},
 

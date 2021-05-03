@@ -5,15 +5,12 @@ import ButtonsController from './Controllers/ButtonsController.js';
 import NewProductController from './Controllers/NewProductController.js';
 import NavBarController from './Controllers/NavBarController.js';
 import LogoutController from './Controllers/LogoutController.js';
-//cuando todo el html y css esten cargados
+
 window.addEventListener('DOMContentLoaded', async (event) => {
-	//seleccionamos el loader
+	
 	const loader = document.querySelector('.loader-container');
 	const loaderController = new LoaderController(loader);
-	//para ocultar el loader cuando este todo cargado.
-	//creamos la clase hidden para lds-heart
-
-	//seleccionamos el elemento para el controlador
+	
 	const navBar = document.querySelector('.nav-bar');
 	new NavBarController(navBar);
 
