@@ -23,8 +23,8 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 	const detailController = new DetailController(detailProductElement);
 	detailController.showDetailsProduct();
 
-	const deleteButtonElement = document.querySelector('.button-deleteProduct');
-	const deleteButton = new ButtonsController(deleteButtonElement);
-	deleteButton.deleteProductButton();
-	console.log(deleteButton);
+	// const deleteButtonElement = document.querySelector('.button-deleteProduct');
+	// const deleteButton = new ButtonsController(deleteButtonElement);
+	// deleteButton.deleteProductButton();
+	// console.log('en detailsproductws', deleteButton);
 });

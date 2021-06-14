@@ -7,10 +7,9 @@ import NavBarController from './Controllers/NavBarController.js';
 import LogoutController from './Controllers/LogoutController.js';
 
 window.addEventListener('DOMContentLoaded', async (event) => {
-	
 	const loader = document.querySelector('.loader-container');
 	const loaderController = new LoaderController(loader);
-	
+
 	const navBar = document.querySelector('.nav-bar');
 	new NavBarController(navBar);
 
@@ -24,10 +23,6 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 	const logoutButtonElement = document.querySelector('.logout-button');
 	const logoutButton = new LogoutController(logoutButtonElement);
 	logoutButton.deleteTokeFromStorage();
-
-	// const loginButtonElement = document.querySelector('.profile-icon');
-	// const loginButton = new ButtonsController(loginButtonElement);
-	// loginButton.loginButton();
 
 	const newProduct = document.querySelector('header');
 	new NewProductController(newProduct);

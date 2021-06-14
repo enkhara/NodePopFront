@@ -1,6 +1,7 @@
 import BaseController from './BaseController.js';
 import { oneProductView, productMissingView } from '../views.js';
 import DataService from '../services/DataService.js';
+import ButtonsController from './ButtonsController.js';
 
 export default class DetailController extends BaseController {
 	constructor(element) {
@@ -35,10 +36,21 @@ export default class DetailController extends BaseController {
 			const product = await DataService.getProducts(productId);
 			if (product) {
 				this.renderOneProduct(product);
-				const { userId, userName } = await DataService.getUser();
-				const buttonDelete = document.querySelector('button');
+				const user = await DataService.getUser();
+				let userId = null;
+				if (user && user.id) {
+					userId = user.id;
+				}
+
+				const buttonDelete = this.element.querySelector('button');
 
 				if (product.userId === userId) {
+					const deleteButtonElement = document.querySelector(
+						'.button-deleteProduct'
+					);
+					const deleteButton = new ButtonsController(deleteButtonElement);
+					deleteButton.deleteProductButton();
+					console.log('en detailsproductws', deleteButton);
 					buttonDelete.classList.remove('hidden');
 				}
 			} else {
