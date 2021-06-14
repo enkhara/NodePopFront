@@ -2,16 +2,6 @@ import BaseController from './BaseController.js';
 import DataService from '../services/DataService.js';
 
 export default class ButtonsController extends BaseController {
-	// loginButton() {
-	// 	this.element.addEventListener('click', (event) => {
-	// 		const menu = document.querySelector('.userNav');
-
-	// 		if (event.target == this.element) {
-	// 			menu.classList.toggle('hidden');
-	// 		}
-	// 	});
-	// }
-
 	getProductId() {
 		const queryParams = window.location.search.replace('?', '');
 		const idProduct = queryParams.split('=');

@@ -15,10 +15,6 @@ export default class NewProductController extends BaseController {
 				'.addNewProduct-button'
 			);
 			newProductButton.classList.remove('hidden');
-			// const newProductButton = this.element.querySelector('.button-newProduct');
-		} else {
-			// const userButton = this.element.querySelector('.profile-icon');
-			// userButton.classList.remove('hidden');
 		}
 	}
 }

@@ -1,7 +1,6 @@
 import LoaderController from './Controllers/LoaderController.js';
 import ErrorsController from './Controllers/ErrorsController.js';
 import RegisterFormController from './Controllers/RegisterFormController.js';
-import ButtonsController from './Controllers/ButtonsController.js';
 import NavBarController from './Controllers/NavBarController.js';
 
 window.addEventListener('DOMContentLoaded', () => {

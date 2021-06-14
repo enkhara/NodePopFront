@@ -18,9 +18,6 @@ export default class NavBarController extends BaseController {
 			this.selectButtonAndRemoveHiddenClass('.login-button');
 			this.selectButtonAndRemoveHiddenClass('.register-button');
 		}
-		// const currentPageButton = document.querySelector(`.${currentPage}-button`);
-		// currentPageButton.classList.add('hidden');
-		// console.log('nombre del botton del navbar', currentPageButton);
 	}
 
 	selectButtonAndRemoveHiddenClass(element) {
@@ -34,8 +31,6 @@ export default class NavBarController extends BaseController {
 		const locationHrefPage = locationHrefSplit[locationHrefSplit.length - 1]
 			.split('.')
 			.shift();
-
-		console.log('pagina actual', locationHrefPage);
 		return locationHrefPage;
 	}
 }

@@ -38,8 +38,8 @@ export default class DetailController extends BaseController {
 				this.renderOneProduct(product);
 				const user = await DataService.getUser();
 				let userId = null;
-				if (user && user.id) {
-					userId = user.id;
+				if (user && user.userId) {
+					userId = user.userId;
 				}
 
 				const buttonDelete = this.element.querySelector('button');
@@ -50,7 +50,6 @@ export default class DetailController extends BaseController {
 					);
 					const deleteButton = new ButtonsController(deleteButtonElement);
 					deleteButton.deleteProductButton();
-					console.log('en detailsproductws', deleteButton);
 					buttonDelete.classList.remove('hidden');
 				}
 			} else {

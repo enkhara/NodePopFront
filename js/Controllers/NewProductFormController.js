@@ -20,16 +20,6 @@ export default class NewProductFormController extends BaseController {
 	attachEventListener() {
 		const buttonForm = this.element.querySelector('button');
 
-		this.element.querySelectorAll('input').forEach((input) => {
-			input.addEventListener('keyup', (event) => {
-				// if(this.element.checkValidity()){
-				//     buttonForm.removeAttribute('disabled');
-				// }else {
-				//     buttonForm.setAttribute('disabled', true);
-				// }
-			});
-		});
-
 		this.element.addEventListener('submit', async (event) => {
 			event.preventDefault();
 

@@ -1,7 +1,6 @@
 import ProductsListController from './Controllers/ProductsListController.js';
 import LoaderController from './Controllers/LoaderController.js';
 import ErrorsController from './Controllers/ErrorsController.js';
-import ButtonsController from './Controllers/ButtonsController.js';
 import NewProductController from './Controllers/NewProductController.js';
 import NavBarController from './Controllers/NavBarController.js';
 import LogoutController from './Controllers/LogoutController.js';

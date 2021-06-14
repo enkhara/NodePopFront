@@ -34,7 +34,6 @@ export default class RegisterFormController extends BaseController {
 		this.element.querySelectorAll('input').forEach((input) => {
 			const buttonForm = this.element.querySelector('button');
 			input.addEventListener('keyup', (event) => {
-				//console.log(input.validity)
 				if (this.element.checkValidity()) {
 					buttonForm.removeAttribute('disabled');
 				} else {

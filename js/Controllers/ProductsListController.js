@@ -2,7 +2,6 @@ import ButtonsController from './ButtonsController.js';
 import BaseController from './BaseController.js';
 import dataService from '../services/DataService.js';
 import { productView, noneProductsView } from '../views.js';
-import DataService from '../services/DataService.js';
 
 export default class ProductsListController extends BaseController {
 	renderProducts(products, cssClass) {
@@ -17,9 +16,6 @@ export default class ProductsListController extends BaseController {
 			} else {
 				div.classList.add('buy');
 			}
-			// const productButton = new ButtonsController(div);
-
-			// productButton.productButtonDetail(product);
 		}
 	}
 
